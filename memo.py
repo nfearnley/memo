@@ -72,7 +72,7 @@ def setup(self):
     self.memory['memories'] = loadMemories(self.memo_filename, self.memory['memo_lock'])
 
 @require_admin
-@commands('memorize', 'memorise', 'memo')
+@commands('memorize', 'memorise', 'memo', 'remember')
 @example('.memorize lucky You\'ve got to ask yourself one question. Do I feel lucky? Well, do ya, punk?')
 def memorize(bot, trigger):
     if not trigger.group(4):

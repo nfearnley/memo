@@ -113,7 +113,7 @@ def recall(bot, trigger):
         bot.reply("I don't remember %s." % keyword)
         return
     
-    bot.reply(message)
+    bot.say("%s: %s" % (keyword, message))
 
 @require_admin
 @commands('forget')

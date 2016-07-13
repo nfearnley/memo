@@ -40,15 +40,15 @@ def dumpMemories(fn, data, lock):
     try:
         f = open(fn, 'w')
         for keyword in iterkeys(data):
-            for message in data[keyword]:
-                line = '\t'.join((keyword, message))
-                try:
-                    to_write = line + '\n'
-                    if sys.version_info.major < 3:
-                        to_write = to_write.encode('utf-8')
-                    f.write(to_write)
-                except IOError:
-                    break
+            message = data[keyword]
+            line = '\t'.join((keyword, message))
+            try:
+                to_write = line + '\n'
+                if sys.version_info.major < 3:
+                    to_write = to_write.encode('utf-8')
+                f.write(to_write)
+            except IOError:
+                break
         try:
             f.close()
         except IOError:

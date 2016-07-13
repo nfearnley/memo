@@ -93,7 +93,7 @@ def memorize(bot, trigger):
         
     bot.reply("I'll remember %s." % keyword)
     
-    dumpReminders(bot.memo_filename, bot.memory['memories'], bot.memory['memo_lock'])
+    dumpMemories(bot.memo_filename, bot.memory['memories'], bot.memory['memo_lock'])
 
 @commands('recall')
 def recall(bot, trigger):
@@ -139,4 +139,4 @@ def forget(bot, trigger):
     
     bot.reply("I'll forget %s." % keyword)
 
-    dumpReminders(bot.memo_filename, bot.memory['memories'], bot.memory['memo_lock'])
+    dumpMemories(bot.memo_filename, bot.memory['memories'], bot.memory['memo_lock'])

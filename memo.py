@@ -1,7 +1,7 @@
 # coding=utf-8
 """
 memo.py - Sopel Memo Module
-Copyright 2016, Nathan Fearnley
+Copyright 2016, Natalie Fearnley
 
 http://sopel.chat
 """
